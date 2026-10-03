@@ -84,13 +84,13 @@ tmp\            created on the first run, never committed
 The exe is built with PyInstaller and is not code signed, so SmartScreen may show "Windows
 protected your PC": choose More info → Run anyway. Compare the hash with `SHA256SUMS.txt`
 (`certutil -hashfile fix_db.exe SHA256`). The second tool of the project lives in the
-**PS4_hide_icons** repository and ships the same `fix_db.exe` as a helper: after a rebuild copy the
-new exe there too.
+[**PS4_hide_icons**](https://github.com/Alex-Goodwin1/PS4_hide_icons) repository and ships the same
+`fix_db.exe` as a helper: after a rebuild copy the new exe there too.
 
 ## License
 
 MIT, Copyright (c) 2026 Alex Goodwin — see `LICENSE`. Editing `app.db` means touching a system file,
-everything is at your own risk.
+everything is at your own risk. Project home: <https://github.com/Alex-Goodwin1/PS4_db_rebuilder>.
 
 ---
 
@@ -180,10 +180,11 @@ tmp\            создаётся при первом запуске, в реп
 exe собран PyInstaller и не подписан, поэтому SmartScreen может показать «Windows защитила ваш
 компьютер»: нажмите «Подробнее» → «Выполнить в любом случае». Сверяйте хэш с `SHA256SUMS.txt`
 (`certutil -hashfile fix_db.exe SHA256`). Второй инструмент проекта лежит в репозитории
-**PS4_hide_icons** и использует тот же `fix_db.exe` как помощник: после пересборки скопируйте новый
-exe туда.
+[**PS4_hide_icons**](https://github.com/Alex-Goodwin1/PS4_hide_icons) и использует тот же
+`fix_db.exe` как помощник: после пересборки скопируйте новый exe туда.
 
 ## Лицензия
 
 MIT, Copyright (c) 2026 Alex Goodwin — см. `LICENSE`. Правка `app.db` — это вмешательство в
-системный файл, всё делается на свой страх и риск.
+системный файл, всё делается на свой страх и риск. Наш адрес:
+<https://github.com/Alex-Goodwin1/PS4_db_rebuilder>.
