@@ -1,0 +1,21 @@
+# runtime data of the tools: local app.db, .orig, backups, param.sfo cache, reports
+# (never publish those, they contain the game list of a console)
+tmp/
+
+# build output
+build/
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+
+# local scratch dirs
+_probe/
+.venv/
+venv/
+.vscode/
+.idea/
+
+# release archives: build them with make_dist.bat and attach them to a GitHub release
+*.zip
