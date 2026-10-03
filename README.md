@@ -184,4 +184,3 @@ exe собран PyInstaller и не подписан, поэтому SmartScree
 
 MIT, Copyright (c) 2026 Alex Goodwin — см. `LICENSE`. Правка `app.db` — вмешательство в системный
 файл консоли, всё делается на ваш риск.
-
