@@ -1,4 +1,3 @@
-# builds dist\fix_db.zip and the SHA256SUMS files of this repository
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 

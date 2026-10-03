@@ -1,6 +1,5 @@
 * text=auto
 
-# do not touch the shipped binaries (Windows autocrlf must not rewrite them)
 *.exe binary
 *.dll binary
 *.db binary

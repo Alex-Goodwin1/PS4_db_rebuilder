@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from __future__ import print_function
 
 import argparse
@@ -826,7 +824,7 @@ def verify(cursor, tables, registrations, version):
 def parse_args(argv=None):
 	parser = argparse.ArgumentParser(
 		description="add the games of a PS4 (external HDD ext0 / internal HDD) to app.db")
-	parser.add_argument("PS4_IP", nargs="?", default=None, help="PS4 address, e.g. 192.0.2.10")
+	parser.add_argument("PS4_IP", nargs="?", default=None, help="address of the PS4, required unless --db is used")
 	parser.add_argument("--port", type=int, default=2121, help="FTP port (GoldHEN uses 2121)")
 	parser.add_argument("--user", default="username", help="FTP user")
 	parser.add_argument("--password", default="password", help="FTP password")
