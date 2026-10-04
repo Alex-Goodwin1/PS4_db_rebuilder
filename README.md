@@ -56,42 +56,9 @@ code 1 instead of a traceback.
 and the game folder is gone. `NPXS*` rows, rows with `onDisc=1` and rows of an unreadable storage
 are never touched; if no storage could be read at all, `--prune` does nothing.
 
-## Files
 
-```
-fix_db.exe      the prebuilt program (no Python needed)
-run_check.bat   check only, nothing is written to the console
-run_apply.bat   write app.db back to the console
-fix_db.py       the source: FTP, param.sfo, tbl_appbrowse_*, row writing
-appinfo.py      a pseudo app.info for tbl_appinfo
-sfo\            param.sfo reader (MIT, Copyright (c) 2016 cologler)
-build_exe.bat   rebuild fix_db.exe (PyInstaller)
-make_dist.bat   build dist\fix_db.zip and refresh SHA256SUMS.txt
-SHA256SUMS.txt  hash of fix_db.exe
-LICENSE         MIT
-tmp\            created on the first run, never committed
-```
 
-## Build
-
-| step | what it does |
-|--|--|
-| `python -m pip install pyinstaller` | install the builder |
-| `build_exe.bat` | rebuild `fix_db.exe` |
-| `python fix_db.py PS4_IP --db tmp\app.db` | run from the sources instead of the exe |
-| `make_dist.bat` | build `dist\fix_db.zip` and refresh `SHA256SUMS.txt` |
-
-The exe is built with PyInstaller and is not code signed, so SmartScreen may show "Windows
-protected your PC": choose More info → Run anyway. Compare the hash with `SHA256SUMS.txt`
-(`certutil -hashfile fix_db.exe SHA256`). The second tool of the project lives in the
-[**PS4_hide_icons**](https://github.com/Alex-Goodwin1/PS4_hide_icons) repository and ships the same
-`fix_db.exe` as a helper: after a rebuild copy the new exe there too.
-
-## License
-
-MIT, Copyright (c) 2026 Alex Goodwin — see `LICENSE`. Editing `app.db` means touching a system file,
-everything is at your own risk. Project home: <https://github.com/Alex-Goodwin1/PS4_db_rebuilder>.
-
+MIT, Copyright (c) 2026 Alex Goodwin
 ---
 
 # fix_db — русская версия
@@ -152,39 +119,5 @@ run_apply.bat   записать исправленную app.db на консо
 папки игры больше нет. Строки `NPXS*`, строки с `onDisc=1` и строки непрочитанного носителя не
 затрагиваются; если не прочитан ни один носитель, `--prune` не делает ничего.
 
-## Файлы
 
-```
-fix_db.exe      готовая программа (Python не нужен)
-run_check.bat   только проверка, на консоль ничего не пишется
-run_apply.bat   записать app.db обратно на консоль
-fix_db.py       исходник: FTP, param.sfo, tbl_appbrowse_*, запись строк
-appinfo.py      псевдо-app.info для tbl_appinfo
-sfo\            чтение param.sfo (MIT, Copyright (c) 2016 cologler)
-build_exe.bat   пересборка fix_db.exe (PyInstaller)
-make_dist.bat   сборка dist\fix_db.zip и обновление SHA256SUMS.txt
-SHA256SUMS.txt  хэш fix_db.exe
-LICENSE         MIT
-tmp\            создаётся при первом запуске, в репозиторий не попадает
-```
-
-## Сборка
-
-| шаг | что делает |
-|--|--|
-| `python -m pip install pyinstaller` | поставить сборщик |
-| `build_exe.bat` | пересобрать `fix_db.exe` |
-| `python fix_db.py PS4_IP --db tmp\app.db` | запуск из исходников вместо exe |
-| `make_dist.bat` | собрать `dist\fix_db.zip` и обновить `SHA256SUMS.txt` |
-
-exe собран PyInstaller и не подписан, поэтому SmartScreen может показать «Windows защитила ваш
-компьютер»: нажмите «Подробнее» → «Выполнить в любом случае». Сверяйте хэш с `SHA256SUMS.txt`
-(`certutil -hashfile fix_db.exe SHA256`). Второй инструмент проекта лежит в репозитории
-[**PS4_hide_icons**](https://github.com/Alex-Goodwin1/PS4_hide_icons) и использует тот же
-`fix_db.exe` как помощник: после пересборки скопируйте новый exe туда.
-
-## Лицензия
-
-MIT, Copyright (c) 2026 Alex Goodwin — см. `LICENSE`. Правка `app.db` — это вмешательство в
-системный файл, всё делается на свой страх и риск. Наш адрес:
-<https://github.com/Alex-Goodwin1/PS4_db_rebuilder>.
+MIT, Copyright (c) 2026 Alex Goodwin
